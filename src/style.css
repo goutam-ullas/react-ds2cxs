@@ -308,7 +308,8 @@ transition: width 0.5s
 }
 
 .video {
-  transition: width 1s, height 1s
+  transition: width 1s, height 1s;
+  pointer-events: auto
 }
 
 .theme{

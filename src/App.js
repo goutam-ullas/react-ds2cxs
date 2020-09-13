@@ -238,7 +238,8 @@ class Application extends React.Component {
             color: "black",
             left: this.state.themeLeft,
             top: this.state.themeStart,
-            height: this.state.themeGap
+            height: this.state.themeGap,
+            pointerEvents: "none"
           }}
         >
           <p className="theme"> {this.theme1Title} </p>
