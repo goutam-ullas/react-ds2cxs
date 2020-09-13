@@ -141,7 +141,10 @@ class Application extends React.Component {
 
   handleClickOutside(event) {
     console.log("clicked outside");
-    this.closeaboutFunction();
+    if (!this.wrapperRef.current.contains(event.target)) {
+        this.closeaboutFunction();
+        console.log("clicked outside");
+      }
     /*if (this.state.aboutState == false) {
       if (!this.wrapperRef.current.contains(event.target)) {
         this.aboutFunction();
