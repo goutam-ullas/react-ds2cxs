@@ -313,7 +313,8 @@ transition: width 0.5s
 
 .theme{
   font-family: adobe caslon pro;
-  color: black; 
+  color: black;
+  font-weight: regular; 
   line-height: 1.5;
   width:50%
 }
