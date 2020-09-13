@@ -11,6 +11,7 @@
 
 [data-reach-slider-input] {
   outline:none;
+  cursor:pointer;
 }
 
 [data-reach-slider-track] {
@@ -301,11 +302,28 @@ position: fixed;
 display:  flex;
 right: 0;
 top: 0;
-background-color: black;
+background-color: #fc1d28;
 overflow:scroll;
 transition: width 0.5s
 }
 
 .video {
   transition: width 1s, height 1s
+}
+
+.mymap{
+  outline:none;
+}
+
+.mymap:focus{
+  outline:none;
+}
+
+.mymap:focus,
+container:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }

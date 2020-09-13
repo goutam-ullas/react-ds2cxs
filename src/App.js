@@ -200,6 +200,7 @@ class Application extends React.Component {
       <div>
         <div
           ref={el => (this.mapContainer = el)}
+          className = "mymap"
           style={{
             position: "fixed",
             left: 0,
@@ -207,7 +208,6 @@ class Application extends React.Component {
             top: 0,
             height: this.state.mapHeight,
             width: this.state.mapWidth,
-            outline: "none"
           }}
         />
         <div
