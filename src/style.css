@@ -292,6 +292,7 @@ button[aria-label][data-balloon-pos] {
 }
 
 .titlebar{
+  font-family: ballinger mono;
   position: fixed;
   width: 50%;
 }
