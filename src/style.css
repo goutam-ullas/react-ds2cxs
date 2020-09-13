@@ -311,6 +311,12 @@ transition: width 0.5s
   transition: width 1s, height 1s
 }
 
+.theme{
+  color: #808080; 
+  line-height: 1.5;
+  width:50%
+}
+
 *:focus {
     outline: none;
 }

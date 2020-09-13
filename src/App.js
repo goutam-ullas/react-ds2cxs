@@ -237,10 +237,8 @@ class Application extends React.Component {
             height: this.state.themeGap
           }}
         >
-          <p> {this.theme1Title} </p>
-          <p style={{ color: "	#808080", lineHeight: "1.5" }}>
-            {this.theme1Desc}
-          </p>
+          <p className="theme"> {this.theme1Title} </p>
+          <p className="theme">{this.theme1Desc}</p>
           <ReactPlayer
             className="video"
             style={{
@@ -297,8 +295,12 @@ class Application extends React.Component {
             height: this.state.themeGap
           }}
         >
-          <p> {this.theme2Title} </p>
-          <p> {this.theme2Desc} </p>
+          <p className="theme">
+            {this.theme2Title}{" "}
+          </p>
+          <p className="theme">
+            {this.theme2Desc}{" "}
+          </p>
           <ReactPlayer
             className="video"
             style={{
