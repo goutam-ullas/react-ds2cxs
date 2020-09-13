@@ -158,6 +158,9 @@ class Application extends React.Component {
     this.setState(prevState => ({
       aboutState: !prevState.aboutState
     }));
+    if (this.state.legendState == false) {
+      this.setState({ legendWidth: 0, legendState: true });
+    }
     if (this.state.aboutState == true) {
       this.setState({ aboutWidth: window.innerWidth / 2 });
     } else {
@@ -170,6 +173,9 @@ class Application extends React.Component {
     this.setState(prevState => ({
       legendState: !prevState.legendState
     }));
+    if (this.state.aboutState == false) {
+      this.setState({ aboutWidth: 0, aboutState: true });
+    }
     if (this.state.legendState == true) {
       this.setState({ legendWidth: window.innerWidth / 2 });
     } else {
@@ -179,8 +185,12 @@ class Application extends React.Component {
 
   circleFunction() {
     console.log("circle");
-    this.setState({ aboutWidth: 0 });
-    this.setState({ aboutState: true });
+    this.setState({
+      aboutWidth: 0,
+      aboutState: true,
+      legendWidth: 0,
+      legendState: false
+    });
     if (this.state.circleState == this.state.maxThemes) {
       this.setState({ circleState: 0 });
     } else {
@@ -204,8 +214,12 @@ class Application extends React.Component {
     this.setState(prevState => ({
       squareState: !prevState.squareState
     }));
-    this.setState({ aboutWidth: 0 });
-    this.setState({ aboutState: true });
+    this.setState({
+      aboutWidth: 0,
+      aboutState: true,
+      legendWidth: 0,
+      legendState: false
+    });
     if (this.state.squareState == true) {
       this.setState({ squareText: "Square" });
     } else {
