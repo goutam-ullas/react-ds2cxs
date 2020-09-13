@@ -355,6 +355,7 @@ class Application extends React.Component {
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
+              verticalAlign:"middle",
               width: 120
             }}
             onChange={value => this.sliderChange(value)}
