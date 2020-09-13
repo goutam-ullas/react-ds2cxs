@@ -345,10 +345,11 @@ class Application extends React.Component {
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
-              color: "#2f1dfc"
+              color: "#2f1dfc",
+              fontFamily: "adobe caslon pro"
             }}
           >
-            about
+            About
           </span>
           <SliderInput
             min={0}
