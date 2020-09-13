@@ -9,12 +9,27 @@
   --balloon-move: 12px;
 }
 
+[data-reach-slider-input] {
+  stroke-width: 0;
+  font-weight: lighter;
+}
+
+[data-reach-slider-input]:focus {
+  stroke-width: 0;
+  outline: none;
+}
+
 [data-reach-slider-track] {
   background: #2f1dfc;
+  stroke-width: inherit;
+  border-radius: 0px;
+  height:0;
+  width:0;
 }
 
 [data-reach-slider-track-highlight] {
   background: #2f1dfc;
+  stroke-width: inherit;
 }
 
 [data-reach-slider-handle] {
@@ -271,48 +286,6 @@ button[aria-label][data-balloon-pos] {
 
 [aria-label][data-balloon-pos][data-balloon-length="fit"]:after {
     width: 100%
-}
-
-
-
-
-.rubber-slider {
-  overflow: visible;
-}
-
-.rubber-slider-input {
-  outline: none;
-}
-
-.rubber-slider-handle {
-  pointer-events: all;
-  fill: var(--rubber-slider-accent);
-  stroke: var(--rubber-slider-accent);
-  r: 5;
-}
-
-.rubber-slider-track {
-  stroke: var(--rubber-slider-ui);
-  stroke-width: 1.5;
-}
-
-.rubber-slider-pseudo-handle:focus {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-13px);
-  width: 0px;
-  height: 0px;
-  background-color: var(--rubber-slider-accent);
-  outline: none;
-  r: 5;
-}
-
-.rubber-slider-pseudo-track {
-  position: relative;
-}
-
-.rubber-slider-input {
-  pointer-events: none;
 }
 
 .rating-value {
