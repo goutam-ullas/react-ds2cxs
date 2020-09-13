@@ -296,8 +296,7 @@ class Application extends React.Component {
         <div className="titlebar" style={{ zIndex: 1000 }}>
           <span
             role="button"
-            aria-label="Index Button"
-            data-balloon-pos="down-right"
+            aria-label=""
             onClick={this.indexFunction}
             style={{
               fontSize: 32,
