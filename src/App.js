@@ -373,7 +373,7 @@ class Application extends React.Component {
           </SliderInput>
           <span
             role="button"
-            aria-label="Next Scene"
+            aria-label="Next"
             data-balloon-pos="down-right"
             onClick={this.circleFunction}
             style={{
