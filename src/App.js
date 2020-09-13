@@ -249,7 +249,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: 50,
-              left: 800,
+              right: 300,
               zIndex: this.state.videoZindex1
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
@@ -263,8 +263,8 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "absolute",
-              top: 250,
-              left: 900,
+              bottom: 300,
+              right: 100,
               zIndex: this.state.videoZindex2
             }}
             height={this.state.videoDimX2 * this.state.videoHeight}
@@ -292,7 +292,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: 50,
-              left: 800,
+              right: 200,
               zIndex: this.state.videoZindex1
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
@@ -307,8 +307,8 @@ class Application extends React.Component {
               className="video"
               style={{
                 position: "absolute",
-                top: 200,
-                left: 1140,
+                bottom: 300,
+                right: 100,
                 zIndex: this.state.imageZindex1
               }}
               src="https://i.imgur.com/xRTW0OR.jpg"
