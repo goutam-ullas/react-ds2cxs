@@ -336,7 +336,7 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.indexFunction}
             style={{
-              fontSize: 48,
+              fontSize: 12,
               position: "relative",
               display: "inline-block",
               top: 5,
