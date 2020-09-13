@@ -46,7 +46,7 @@ class Application extends React.Component {
       videoHeight: 180,
       videoWidth: 320,
       imageDimX1: 0,
-      imageZindex1:1
+      imageZindex1: 1
     };
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
@@ -323,7 +323,7 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.indexFunction}
             style={{
-              fontSize: 32,
+              fontSize: 48,
               position: "relative",
               display: "inline-block",
               marginLeft: 10,
@@ -332,7 +332,7 @@ class Application extends React.Component {
               color: "#2f1dfc"
             }}
           >
-            &#11199;
+            &#9675;
           </span>
           <span
             role="button"
@@ -406,7 +406,7 @@ class Application extends React.Component {
           >
             &#9653;
           </span>
-                    <span
+          <span
             role="button"
             aria-label="Circle Button"
             data-balloon-pos="down-right"
