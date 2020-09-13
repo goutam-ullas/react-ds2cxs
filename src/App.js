@@ -10,6 +10,7 @@ import {
 import "@reach/slider/styles.css";
 import ReactPlayer from "react-player";
 import smoothscroll from "smoothscroll-polyfill";
+import Typekit from "react-typekit";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 //import "mapbox-gl/dist/mapbox-gl.css";
@@ -32,7 +33,7 @@ class Application extends React.Component {
       aboutState: true,
       aboutWidth: 0,
       legendState: true,
-      legendWidth: 0,      
+      legendWidth: 0,
       squareText: "",
       circleText: "",
       maxThemes: 2,
@@ -329,6 +330,7 @@ class Application extends React.Component {
           </span>
         </div>
         <div className="titlebar" style={{ zIndex: 10 }}>
+          <Typekit kitId="bor7jxc" />
           <span
             role="button"
             aria-label=""
@@ -357,8 +359,7 @@ class Application extends React.Component {
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
-              color: "#2f1dfc",
-              fontFamily: "adobe caslon pro"
+              color: "#2f1dfc"
             }}
           >
             About
@@ -485,7 +486,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div className = "legendItem"> &#11044; </div>
+          <div className="legendItem"> &#11044; </div>
         </div>
       </div>
     );
