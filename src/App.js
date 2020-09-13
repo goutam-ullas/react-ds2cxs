@@ -42,7 +42,11 @@ class Application extends React.Component {
       videoDimX3: 1,
       videoZindex1: 1,
       videoZindex2: 1,
-      videoZindex3: 1
+      videoZindex3: 1,
+      videoHeight: 180,
+      videoWidth: 320,
+      imageDimX1:0,
+      imageZindex1:1
     };
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
@@ -195,6 +199,15 @@ class Application extends React.Component {
     this.map.zoomTo((1 / 49.5) * (v - 1) + 18);
   }
 
+  toggleImage1(){
+    this.setState(prevState => ({
+      imageDimX1: 1- prevState.imageDimX1
+    }));
+    this.setState(prevState => ({
+      imageZindex1: 1- prevState.imageZindex1
+    }));
+  }
+
   render() {
     return (
       <div>
@@ -207,7 +220,7 @@ class Application extends React.Component {
             top: 0,
             height: this.state.mapHeight,
             width: this.state.mapWidth
-            }}
+          }}
         />
         <div
           style={{
@@ -229,8 +242,8 @@ class Application extends React.Component {
               left: 400,
               zIndex: this.state.videoZindex1
             }}
-            height={this.state.videoDimX1 * 180}
-            width={this.state.videoDimX1 * 320}
+            height={this.state.videoDimX1 * this.state.videoHeight}
+            width={this.state.videoDimX1 * this.state.videoWidth}
             url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 2, videoZindex1: 10 })}
@@ -244,8 +257,8 @@ class Application extends React.Component {
               left: 550,
               zIndex: this.state.videoZindex2
             }}
-            height={this.state.videoDimX2 * 180}
-            width={this.state.videoDimX2 * 320}
+            height={this.state.videoDimX2 * this.state.videoHeight}
+            width={this.state.videoDimX2 * this.state.videoWidth}
             url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
@@ -259,8 +272,8 @@ class Application extends React.Component {
               left: 900,
               zIndex: this.state.videoZindex3
             }}
-            height={this.state.videoDimX3 * 180}
-            width={this.state.videoDimX3 * 320}
+            height={this.state.videoDimX3 * this.state.videoHeight}
+            width={this.state.videoDimX3 * this.state.videoWidth}
             url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX3: 2, videoZindex3: 10 })}
@@ -287,8 +300,8 @@ class Application extends React.Component {
               left: 500,
               zIndex: this.state.videoZindex1
             }}
-            height={this.state.videoDimX1 * 180}
-            width={this.state.videoDimX1 * 320}
+            height={this.state.videoDimX1 * this.state.videoHeight}
+            width={this.state.videoDimX1 * this.state.videoWidth}
             url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 2, videoZindex1: 10 })}
@@ -302,13 +315,32 @@ class Application extends React.Component {
               left: 650,
               zIndex: this.state.videoZindex2
             }}
-            height={this.state.videoDimX2 * 180}
-            width={this.state.videoDimX2 * 320}
+            height={this.state.videoDimX2 * this.state.videoHeight}
+            width={this.state.videoDimX2 * this.state.videoWidth0}
             url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
           />
+          <span
+            role="button"
+            aria-label=""
+            onClick={() => this.toggleImage1()}
+          >
+            <img
+              className="video"
+              style={{
+                position: "absolute",
+                top: 190,
+                left: 850,
+                zIndex: this.state.imageZindex1
+              }}
+              height={(this.state.imageDimX1+1) * this.state.videoHeight}
+              width={(this.state.imageDimX1+1) * this.state.videoWidth0}
+              src="https://i.imgur.com/xRTW0OR.jpg"
+              alt="Logo"
+            />
+          </span>
         </div>
         <div className="titlebar" style={{ zIndex: 10 }}>
           <span
