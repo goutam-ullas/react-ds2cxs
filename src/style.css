@@ -319,8 +319,7 @@ transition: width 0.5s
   outline:none;
 }
 
-.mymap:focus,
-container:focus,
+
 input:focus,
 select:focus,
 textarea:focus,
