@@ -206,8 +206,7 @@ class Application extends React.Component {
             right: 0,
             top: 0,
             height: this.state.mapHeight,
-            width: this.state.mapWidth,
-            outline:'none'
+            width: this.state.mapWidth
             }}
         />
         <div
