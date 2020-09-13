@@ -336,11 +336,9 @@ class Application extends React.Component {
               className="video"
               style={{
                 position: "absolute",
-                top: 190,
+                top: 90,
                 left: 850
               }}
-              height={(this.state.imageDimX1 + 1) * this.state.videoHeight}
-              width={(this.state.imageDimX1 + 1) * this.state.videoWidth0}
               src="https://i.imgur.com/xRTW0OR.jpg"
               alt="Logo"
             />
