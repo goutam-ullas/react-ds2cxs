@@ -21,6 +21,8 @@ class Application extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      mapHeight: window.innerHeight,
+      mapWidth: window.innerWidth,
       lng: 78.4735,
       lat: 17.3755,
       value: 50,
@@ -46,11 +48,15 @@ class Application extends React.Component {
     this.squareFunction = this.squareFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
     this.aboutText =
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt. This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt.";
   }
 
   componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
       style: "mapbox://styles/nnikita/ckd7n4m5b04e31ip8ai5a1xfj",
@@ -122,6 +128,13 @@ class Application extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  updateDimensions() {
+    this.setState({
+      mapHeight: window.innerHeight,
+      mapWidth: window.innerWidth
+    });
+  }
+
   enlargeVid1() {
     this.setState({ videoDimX1: 2 });
   }
@@ -191,8 +204,9 @@ class Application extends React.Component {
             left: 0,
             right: 0,
             top: 0,
-            height: window.innerHeight,
-            width: window.innerWidth
+            height: this.state.mapHeight,
+            width: this.state.mapWidth,
+            outline: 'none'
           }}
         />
         <div
@@ -329,27 +343,27 @@ class Application extends React.Component {
           >
             about
           </span>
-            <SliderInput
-              min={0}
-              max={100}
-              step={0.1}
-              value={this.state.value}
-              hasfocus={false}
-              style={{
-                position: "relative",
-                display: "inline-block",
-                marginLeft: 10,
-                marginRight: 10,
-                textAlign: "center",
-                width: 120
-              }}
-              onChange={value => this.sliderChange(value)}
-            >
-              <SliderTrack style={{ height: 1 }}>
-                <SliderTrackHighlight />
-                <SliderHandle />
-              </SliderTrack>
-            </SliderInput>
+          <SliderInput
+            min={0}
+            max={100}
+            step={0.1}
+            value={this.state.value}
+            hasfocus={false}
+            style={{
+              position: "relative",
+              display: "inline-block",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              width: 120
+            }}
+            onChange={value => this.sliderChange(value)}
+          >
+            <SliderTrack style={{ height: 1 }}>
+              <SliderTrackHighlight />
+              <SliderHandle />
+            </SliderTrack>
+          </SliderInput>
           <span
             role="button"
             aria-label="Circle Button"
