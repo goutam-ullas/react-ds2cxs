@@ -45,8 +45,7 @@ class Application extends React.Component {
       videoZindex3: 1,
       videoHeight: 180,
       videoWidth: 320,
-      imageDimX1:0,
-      imageZindex1:1
+      imageDimX1:0
     };
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
@@ -203,9 +202,6 @@ class Application extends React.Component {
     this.setState(prevState => ({
       imageDimX1: 1- prevState.imageDimX1
     }));
-    this.setState(prevState => ({
-      imageZindex1: 1- prevState.imageZindex1
-    }));
   }
 
   render() {
@@ -332,8 +328,7 @@ class Application extends React.Component {
               style={{
                 position: "absolute",
                 top: 190,
-                left: 850,
-                zIndex: this.state.imageZindex1
+                left: 850
               }}
               height={(this.state.imageDimX1+1) * this.state.videoHeight}
               width={(this.state.imageDimX1+1) * this.state.videoWidth0}
