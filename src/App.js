@@ -9,6 +9,7 @@ import {
 } from "@reach/slider";
 import "@reach/slider/styles.css";
 import ReactPlayer from "react-player";
+import smoothscroll from 'smoothscroll-polyfill';
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 //import "mapbox-gl/dist/mapbox-gl.css";
@@ -62,6 +63,8 @@ class Application extends React.Component {
     this.map.scrollZoom.disable();
     this.map.doubleClickZoom.disable();
     this.map.dragPan.enable();
+    // kick off the polyfill!
+smoothscroll.polyfill();
     var deltaDistance = 100;
     var deltaDegrees = 10;
 
