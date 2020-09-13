@@ -53,6 +53,10 @@
   outline: none;
 }
 
+[aria-label] {
+  cursor:pointer;
+}
+
 button[aria-label][data-balloon-pos] {
     overflow: visible
 }
