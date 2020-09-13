@@ -217,7 +217,7 @@ smoothscroll.polyfill();
             }}
             height={this.state.videoDimX1 * 180}
             width={this.state.videoDimX1 * 320}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 2, videoZindex1: 10 })}
             onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
@@ -232,7 +232,7 @@ smoothscroll.polyfill();
             }}
             height={this.state.videoDimX2 * 180}
             width={this.state.videoDimX2 * 320}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
@@ -247,7 +247,7 @@ smoothscroll.polyfill();
             }}
             height={this.state.videoDimX3 * 180}
             width={this.state.videoDimX3 * 320}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX3: 2, videoZindex3: 10 })}
             onPause={() => this.setState({ videoDimX3: 1, videoZindex3: 1 })}
@@ -275,7 +275,7 @@ smoothscroll.polyfill();
             }}
             height={this.state.videoDimX1 * 180}
             width={this.state.videoDimX1 * 320}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 2, videoZindex1: 10 })}
             onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
@@ -290,7 +290,7 @@ smoothscroll.polyfill();
             }}
             height={this.state.videoDimX2 * 180}
             width={this.state.videoDimX2 * 320}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://vimeo.com/447916895/08bdea37d0"
             controls={true}
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
