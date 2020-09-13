@@ -310,7 +310,7 @@ class Application extends React.Component {
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
           />
         </div>
-        <div className="titlebar" style={{ zIndex: 1000 }}>
+        <div className="titlebar" style={{ zIndex: 10 }}>
           <span
             role="button"
             aria-label=""
@@ -417,7 +417,8 @@ class Application extends React.Component {
               fontSize: 28,
               position: "absolute",
               left: 10,
-              color: "blue"
+              color: "blue",
+              zIndex:300
             }}
           >
             &#10005;
