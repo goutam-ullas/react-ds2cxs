@@ -10,24 +10,15 @@
 }
 
 [data-reach-slider-input] {
-  stroke-width: 0px;
-  font-weight: lighter;
   outline:none;
 }
 [data-reach-slider-track] {
   background: #2f1dfc;
-  stroke: 0px;
-  stroke-width: 0px;
-  border: 0px;
-  border-radius: 0px;
-  height:0px;
-  width:0px;
-  size:0px;
+  height:10%;
 }
 
 [data-reach-slider-track-highlight] {
   background: #2f1dfc;
-  stroke-width: inherit;
 }
 
 [data-reach-slider-handle] {
