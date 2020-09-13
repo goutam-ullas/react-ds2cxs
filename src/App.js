@@ -44,11 +44,14 @@ class Application extends React.Component {
       videoZindex2: 1,
       videoZindex3: 1
     };
+    this.wrapperRef = React.createRef();
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.closeaboutFunction = this.closeaboutFunction.bind(this);
     this.aboutText =
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt. This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt.";
   }
@@ -71,6 +74,7 @@ class Application extends React.Component {
     this.map.dragPan.enable();
     // kick off the polyfill!
     smoothscroll.polyfill();
+    document.addEventListener("mousedown", this.handleClickOutside);
     var deltaDistance = 100;
     var deltaDegrees = 10;
 
@@ -135,22 +139,38 @@ class Application extends React.Component {
     });
   }
 
+  handleClickOutside(event) {
+    console.log("clicked outside");
+    this.closeaboutFunction();
+    /*if (this.state.aboutState == false) {
+      if (!this.wrapperRef.current.contains(event.target)) {
+        this.aboutFunction();
+        console.log("clicked outside");
+      }
+    }*/
+  }
+
   enlargeVid1() {
     this.setState({ videoDimX1: 2 });
   }
 
   ensmallVide1() {}
 
+  closeaboutFunction() {
+    this.setState({ aboutWidth: 0 });
+  }
+
   aboutFunction() {
     console.log("about");
-    this.setState(prevState => ({
+    this.setState({ aboutWidth: window.innerWidth / 2 });
+    /*this.setState(prevState => ({
       aboutState: !prevState.aboutState
     }));
     if (this.state.aboutState == true) {
       this.setState({ aboutWidth: window.innerWidth / 2 });
     } else {
       this.setState({ aboutWidth: 0 });
-    }
+    }*/
   }
 
   circleFunction() {
@@ -206,7 +226,7 @@ class Application extends React.Component {
             top: 0,
             height: this.state.mapHeight,
             width: this.state.mapWidth,
-            outline: 'none'
+            outline: "none"
           }}
         />
         <div
@@ -348,14 +368,13 @@ class Application extends React.Component {
             max={100}
             step={0.1}
             value={this.state.value}
-            hasfocus={false}
             style={{
               position: "relative",
               display: "inline-block",
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
-              verticalAlign:"middle",
+              verticalAlign: "middle",
               width: 120
             }}
             onChange={value => this.sliderChange(value)}
@@ -402,6 +421,7 @@ class Application extends React.Component {
         </div>
         <div
           className="about"
+          ref={this.wrapperRef}
           style={{
             width: this.state.aboutWidth,
             height: window.innerHeight,
@@ -412,13 +432,13 @@ class Application extends React.Component {
           <span
             role="button"
             aria-label=""
-            onClick={this.aboutFunction}
+            onClick={this.closeaboutFunction}
             style={{
               fontSize: 28,
               position: "absolute",
               left: 10,
               color: "blue",
-              zIndex:300
+              zIndex: 300
             }}
           >
             &#10005;
