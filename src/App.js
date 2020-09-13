@@ -247,8 +247,8 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "absolute",
-              top: 0,
-              left: 400,
+              top: 50,
+              left: 800,
               zIndex: this.state.videoZindex1
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
@@ -262,8 +262,8 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "absolute",
-              top: 190,
-              left: 550,
+              top: 250,
+              left: 900,
               zIndex: this.state.videoZindex2
             }}
             height={this.state.videoDimX2 * this.state.videoHeight}
@@ -272,21 +272,6 @@ class Application extends React.Component {
             controls={true}
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
-          />
-          <ReactPlayer
-            className="video"
-            style={{
-              position: "absolute",
-              top: 50,
-              left: 900,
-              zIndex: this.state.videoZindex3
-            }}
-            height={this.state.videoDimX3 * this.state.videoHeight}
-            width={this.state.videoDimX3 * this.state.videoWidth}
-            url="https://vimeo.com/447916895/08bdea37d0"
-            controls={true}
-            onPlay={() => this.setState({ videoDimX3: 2, videoZindex3: 10 })}
-            onPause={() => this.setState({ videoDimX3: 1, videoZindex3: 1 })}
           />
         </div>
         <div
