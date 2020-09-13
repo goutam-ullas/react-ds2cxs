@@ -329,16 +329,16 @@ class Application extends React.Component {
             />
           </span>
         </div>
-        <div className="titlebar" style={{ zIndex: 10 }}>
+        <div className="titlebar" style={{ top:-10, zIndex: 10 }}>
           <Typekit kitId="bor7jxc" />
           <span
             role="button"
             aria-label=""
             onClick={this.indexFunction}
             style={{
-              fontSize: 12,
+              fontSize: 48,
               position: "relative",
-              display: "inline-block",
+              display: "inline",
               top: 5,
               marginLeft: 10,
               marginRight: 10,
@@ -353,9 +353,10 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.aboutFunction}
             style={{
-              fontSize: 32,
+              fontSize: 28,
               position: "relative",
-              display: "inline-block",
+              display: "inline",
+              top:0,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
@@ -409,9 +410,10 @@ class Application extends React.Component {
             data-balloon-pos="down-right"
             onClick={this.triangleFunction}
             style={{
-              fontSize: 28,
+              fontSize: 30,
               position: "relative",
               display: "inline-block",
+              top:3,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
