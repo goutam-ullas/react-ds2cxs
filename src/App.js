@@ -290,8 +290,8 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "absolute",
-              top: 0,
-              left: 500,
+              top: 50,
+              left: 800,
               zIndex: this.state.videoZindex1
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
@@ -301,28 +301,13 @@ class Application extends React.Component {
             onPlay={() => this.setState({ videoDimX1: 2, videoZindex1: 10 })}
             onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
           />
-          <ReactPlayer
-            className="video"
-            style={{
-              position: "absolute",
-              top: 190,
-              left: 650,
-              zIndex: this.state.videoZindex2
-            }}
-            height={this.state.videoDimX2 * this.state.videoHeight}
-            width={this.state.videoDimX2 * this.state.videoWidth0}
-            url="https://vimeo.com/447916895/08bdea37d0"
-            controls={true}
-            onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
-            onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
-          />
           <span role="button" aria-label="" onClick={() => this.toggleImage1()}>
             <img
               className="video"
               style={{
                 position: "absolute",
-                top: 10,
-                left: 850,
+                top: 200,
+                left: 1140,
                 zIndex: this.state.imageZindex1
               }}
               src="https://i.imgur.com/xRTW0OR.jpg"
