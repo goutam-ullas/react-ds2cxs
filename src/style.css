@@ -320,9 +320,6 @@ transition: width 0.5s
 }
 
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
+*:focus {
     outline: none;
 }
