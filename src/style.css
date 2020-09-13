@@ -311,15 +311,6 @@ transition: width 0.5s
   transition: width 1s, height 1s
 }
 
-.mymap{
-  outline:none;
-}
-
-.mymap:focus{
-  outline:none;
-}
-
-
 *:focus {
     outline: none;
 }
