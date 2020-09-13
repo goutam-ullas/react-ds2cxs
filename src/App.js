@@ -31,6 +31,8 @@ class Application extends React.Component {
       circleState: 1,
       aboutState: true,
       aboutWidth: 0,
+      legendState: true,
+      legendWidth: 0,      
       squareText: "",
       circleText: "",
       maxThemes: 2,
@@ -51,6 +53,7 @@ class Application extends React.Component {
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
+    this.legendFunction = this.legendFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
     this.aboutText =
@@ -164,6 +167,18 @@ class Application extends React.Component {
       this.setState({ aboutWidth: window.innerWidth / 2 });
     } else {
       this.setState({ aboutWidth: 0 });
+    }
+  }
+
+  legendFunction() {
+    console.log("legend");
+    this.setState(prevState => ({
+      legendState: !prevState.legendState
+    }));
+    if (this.state.legendState == true) {
+      this.setState({ legendWidth: window.innerWidth / 2 });
+    } else {
+      this.setState({ legendWidth: 0 });
     }
   }
 
@@ -328,7 +343,7 @@ class Application extends React.Component {
               fontSize: 48,
               position: "relative",
               display: "inline-block",
-              top:5,
+              top: 5,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
@@ -362,7 +377,7 @@ class Application extends React.Component {
             style={{
               position: "relative",
               display: "inline-block",
-              top:-2,
+              top: -2,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
@@ -412,9 +427,9 @@ class Application extends React.Component {
           </span>
           <span
             role="button"
-            aria-label="Circle Button"
+            aria-label="Map Legend"
             data-balloon-pos="down-right"
-            onClick={this.triangleFunction}
+            onClick={this.legendFunction}
             style={{
               fontSize: 32,
               position: "relative",
@@ -441,6 +456,31 @@ class Application extends React.Component {
             role="button"
             aria-label=""
             onClick={this.aboutFunction}
+            style={{
+              fontSize: 28,
+              position: "absolute",
+              left: 10,
+              color: "blue",
+              zIndex: 300
+            }}
+          >
+            &#10005;
+          </span>
+          <p style={{ margin: 50 }}> {this.aboutText} </p>
+        </div>
+        <div
+          className="legend"
+          style={{
+            width: this.state.legendWidth,
+            height: window.innerHeight,
+            fontSize: 28,
+            zIndex: 100
+          }}
+        >
+          <span
+            role="button"
+            aria-label=""
+            onClick={this.legendFunction}
             style={{
               fontSize: 28,
               position: "absolute",

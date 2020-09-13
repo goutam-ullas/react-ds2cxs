@@ -307,6 +307,17 @@ overflow:scroll;
 transition: width 0.5s;
 }
 
+.legend {
+color: white;
+position: fixed;
+display:  flex;
+right: 0;
+top: 0;
+background-color: black;
+overflow:scroll;
+transition: width 0.5s;
+}
+
 .video {
   transition: width 1s, height 1s;
   pointer-events: auto;
