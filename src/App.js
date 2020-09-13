@@ -152,12 +152,6 @@ class Application extends React.Component {
     });
   }
 
-  enlargeVid1() {
-    this.setState({ videoDimX1: 2 });
-  }
-
-  ensmallVide1() {}
-
   aboutFunction() {
     console.log("about");
     this.setState(prevState => ({
@@ -491,7 +485,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <p style={{ margin: 50 }}> Legend </p>
+          <div class = "legendItem"> &#11044; </div>
         </div>
       </div>
     );

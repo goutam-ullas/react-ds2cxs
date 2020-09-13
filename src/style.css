@@ -318,6 +318,12 @@ overflow:scroll;
 transition: width 0.5s;
 }
 
+.legendItem{
+  font-size: 54px;
+  margin: 50px;
+  color: red;
+}
+
 .video {
   transition: width 1s, height 1s;
   pointer-events: auto;
