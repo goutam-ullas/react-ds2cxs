@@ -411,8 +411,7 @@ class Application extends React.Component {
         >
           <span
             role="button"
-            aria-label="Close"
-            data-balloon-pos="down-left"
+            aria-label=""
             onClick={this.aboutFunction}
             style={{
               fontSize: 28,
