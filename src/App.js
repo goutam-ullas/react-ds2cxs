@@ -421,7 +421,7 @@ class Application extends React.Component {
           </span>
           <span
             role="button"
-            aria-label="Map Legend"
+            aria-label="Legend"
             data-balloon-pos="down-right"
             onClick={this.legendFunction}
             style={{
