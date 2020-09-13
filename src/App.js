@@ -360,6 +360,7 @@ class Application extends React.Component {
             style={{
               position: "relative",
               display: "inline-block",
+              top:-2,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
