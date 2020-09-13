@@ -9,7 +9,7 @@ import {
 } from "@reach/slider";
 import "@reach/slider/styles.css";
 import ReactPlayer from "react-player";
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from "smoothscroll-polyfill";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 //import "mapbox-gl/dist/mapbox-gl.css";
@@ -64,7 +64,7 @@ class Application extends React.Component {
     this.map.doubleClickZoom.disable();
     this.map.dragPan.enable();
     // kick off the polyfill!
-smoothscroll.polyfill();
+    smoothscroll.polyfill();
     var deltaDistance = 100;
     var deltaDegrees = 10;
 
@@ -303,10 +303,12 @@ smoothscroll.polyfill();
             onClick={this.indexFunction}
             style={{
               fontSize: 32,
-              position: "absolute",
-              left: 10,
-              color: "#2f1dfc",
-              top: 7
+              position: "relative",
+              display: "inline-block",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
             }}
           >
             &#11199;
@@ -317,28 +319,37 @@ smoothscroll.polyfill();
             onClick={this.aboutFunction}
             style={{
               fontSize: 32,
-              position: "absolute",
-              left: 100,
-              color: "#2f1dfc",
-              top: 7
+              position: "relative",
+              display: "inline-block",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
             }}
           >
             about
           </span>
-          <SliderInput
-            min={0}
-            max={100}
-            step={0.1}
-            value={this.state.value}
-            hasfocus={false}
-            style={{ position: "absolute", left: 190, top: 0, width:120, stroke:5 }}
-            onChange={value => this.sliderChange(value)}
-          >
-            <SliderTrack style={{height:1}}>
-              <SliderTrackHighlight />
-              <SliderHandle />
-            </SliderTrack>
-          </SliderInput>
+            <SliderInput
+              min={0}
+              max={100}
+              step={0.1}
+              value={this.state.value}
+              hasfocus={false}
+              style={{
+                position: "relative",
+                display: "inline-block",
+                marginLeft: 10,
+                marginRight: 10,
+                textAlign: "center",
+                width: 120
+              }}
+              onChange={value => this.sliderChange(value)}
+            >
+              <SliderTrack style={{ height: 1 }}>
+                <SliderTrackHighlight />
+                <SliderHandle />
+              </SliderTrack>
+            </SliderInput>
           <span
             role="button"
             aria-label="Circle Button"
@@ -346,51 +357,16 @@ smoothscroll.polyfill();
             onClick={this.circleFunction}
             style={{
               fontSize: 32,
-              position: "absolute",
-              left: 330,
-              color: "#2f1dfc",
-              top: 7
+              position: "relative",
+              display: "inline-block",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
             }}
           >
             &#9677;
           </span>
-          <p
-            style={{
-              fontSize: 32,
-              position: "absolute",
-              left: 300,
-              top: 10,
-              color: "#2f1dfc"
-            }}
-          >
-            {this.state.circleText}
-          </p>
-          <span
-            role="button"
-            aria-label="Square Button"
-            data-balloon-pos="down-right"
-            onClick={this.squareFunction}
-            style={{
-              fontSize: 48,
-              position: "absolute",
-              left: 375,
-              color: "#2f1dfc",
-              top: 10
-            }}
-          >
-            &#42;
-          </span>
-          <p
-            style={{
-              fontSize: 32,
-              position: "absolute",
-              left: 380,
-              top: 10,
-              color: "#2f1dfc"
-            }}
-          >
-            {this.state.squareText}
-          </p>
           <span
             role="button"
             aria-label="Triangle Button"
@@ -398,10 +374,12 @@ smoothscroll.polyfill();
             onClick={this.triangleFunction}
             style={{
               fontSize: 28,
-              position: "absolute",
-              left: 420,
-              color: "#2f1dfc",
-              top: 12
+              position: "relative",
+              display: "inline-block",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
             }}
           >
             &#9653;
