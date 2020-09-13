@@ -302,7 +302,7 @@ position: fixed;
 display:  flex;
 right: 0;
 top: 0;
-background-color: #fc1d28;
+background-color: black;
 overflow:scroll;
 transition: width 0.5s
 }
