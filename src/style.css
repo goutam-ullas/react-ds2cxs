@@ -293,7 +293,7 @@ button[aria-label][data-balloon-pos] {
 
 .titlebar{
   position: fixed;
-  width: 30%;
+  width: 50%;
 }
 
 .about {
