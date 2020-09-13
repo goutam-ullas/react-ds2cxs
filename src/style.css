@@ -304,12 +304,12 @@ right: 0;
 top: 0;
 background-color: black;
 overflow:scroll;
-transition: width 0.5s
+transition: width 0.5s;
 }
 
 .video {
   transition: width 1s, height 1s;
-  pointer-events: auto
+  pointer-events: auto;
 }
 
 .theme{
@@ -317,7 +317,11 @@ transition: width 0.5s
   color: black;
   font-weight: regular; 
   line-height: 1.5;
-  width:50%
+  width:50%;
+}
+
+.mapbox-canvas-container { 
+  cursor: crosshair !important;
 }
 
 *:focus {
