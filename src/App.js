@@ -329,7 +329,7 @@ class Application extends React.Component {
             />
           </span>
         </div>
-        <div className="titlebar" style={{ top:-10, zIndex: 10 }}>
+        <div className="titlebar" style={{ top: -10, zIndex: 10 }}>
           <Typekit kitId="bor7jxc" />
           <span
             role="button"
@@ -356,7 +356,7 @@ class Application extends React.Component {
               fontSize: 28,
               position: "relative",
               display: "inline",
-              top:0,
+              top: 0,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
@@ -413,7 +413,7 @@ class Application extends React.Component {
               fontSize: 30,
               position: "relative",
               display: "inline-block",
-              top:3,
+              top: 3,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
@@ -488,7 +488,42 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div className="legendItem"> &#11044; </div>
+          <div className="legendItem" style={{ color: "red", top: 50 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "yellow", top: 125 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "pink", top: 200 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "blue", top: 275 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "brown", top: 350 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "gray", top: 425 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "green", top: 500 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "purple", top: 575 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
+          <div className="legendItem" style={{ color: "orange", top: 650 }}>
+            {" "}
+            &#11044;{" "}
+          </div>
         </div>
       </div>
     );

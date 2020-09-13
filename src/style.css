@@ -324,9 +324,9 @@ transition: width 0.5s;
 }
 
 .legendItem{
-  font-size: 54px;
-  margin: 50px;
-  color: red;
+  font-size: 38px;
+  margin-left: 50px;
+  position: absolute;
 }
 
 .video {
