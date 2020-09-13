@@ -14,7 +14,8 @@
 }
 [data-reach-slider-track] {
   background: #2f1dfc;
-  height:10%;
+  height:1px;
+  border: 0px;
 }
 
 [data-reach-slider-track-highlight] {
