@@ -200,15 +200,15 @@ class Application extends React.Component {
       <div>
         <div
           ref={el => (this.mapContainer = el)}
-          className = "mymap"
           style={{
             position: "fixed",
             left: 0,
             right: 0,
             top: 0,
             height: this.state.mapHeight,
-            width: this.state.mapWidth
-          }}
+            width: this.state.mapWidth,
+            outline:'none'
+            }}
         />
         <div
           style={{
