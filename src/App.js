@@ -491,7 +491,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <p style={{ margin: 50 }}> {this.aboutText} </p>
+          <p style={{ margin: 50 }}> Legend </p>
         </div>
       </div>
     );
