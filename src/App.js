@@ -326,6 +326,7 @@ class Application extends React.Component {
               fontSize: 48,
               position: "relative",
               display: "inline-block",
+              top:5,
               marginLeft: 10,
               marginRight: 10,
               textAlign: "center",
