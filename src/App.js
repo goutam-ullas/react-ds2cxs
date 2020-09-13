@@ -45,7 +45,7 @@ class Application extends React.Component {
       videoZindex3: 1,
       videoHeight: 180,
       videoWidth: 320,
-      imageDimX1:0
+      imageDimX1: 0
     };
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
@@ -54,12 +54,15 @@ class Application extends React.Component {
     this.updateDimensions = this.updateDimensions.bind(this);
     this.aboutText =
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt. This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground. This work is an inquiry, which is both personal and not, and in doing so, also wrestles on this interplay between the public and the private, in gender and in research. Through this, the thesis ultimately hopes to express how the organization of space is linked to how power organizes itself. This discussion is told through questions as they came to be felt.";
-      this.theme1Title="This is Theme 1";
-      this.theme1Desc="This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
-      this.theme2Title="This is Theme 2";
-      this.theme2Desc="This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
-      this.theme3Title="This is Theme 3";
-      this.theme3Desc="This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
+    this.theme1Title = "This is Theme 1";
+    this.theme1Desc =
+      "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
+    this.theme2Title = "This is Theme 2";
+    this.theme2Desc =
+      "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
+    this.theme3Title = "This is Theme 3";
+    this.theme3Desc =
+      "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
   }
 
   componentDidMount() {
@@ -204,9 +207,9 @@ class Application extends React.Component {
     this.map.zoomTo((1 / 49.5) * (v - 1) + 18);
   }
 
-  toggleImage1(){
+  toggleImage1() {
     this.setState(prevState => ({
-      imageDimX1: 1- prevState.imageDimX1
+      imageDimX1: 1 - prevState.imageDimX1
     }));
   }
 
@@ -235,7 +238,9 @@ class Application extends React.Component {
           }}
         >
           <p> {this.theme1Title} </p>
-          <p> {this.theme1Desc} </p>
+          <p style={{ color: "	#808080", lineHeight: "1.5" }}>
+            {this.theme1Desc}
+          </p>
           <ReactPlayer
             className="video"
             style={{
@@ -324,11 +329,7 @@ class Application extends React.Component {
             onPlay={() => this.setState({ videoDimX2: 2, videoZindex2: 10 })}
             onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1 })}
           />
-          <span
-            role="button"
-            aria-label=""
-            onClick={() => this.toggleImage1()}
-          >
+          <span role="button" aria-label="" onClick={() => this.toggleImage1()}>
             <img
               className="video"
               style={{
@@ -336,8 +337,8 @@ class Application extends React.Component {
                 top: 190,
                 left: 850
               }}
-              height={(this.state.imageDimX1+1) * this.state.videoHeight}
-              width={(this.state.imageDimX1+1) * this.state.videoWidth0}
+              height={(this.state.imageDimX1 + 1) * this.state.videoHeight}
+              width={(this.state.imageDimX1 + 1) * this.state.videoWidth0}
               src="https://i.imgur.com/xRTW0OR.jpg"
               alt="Logo"
             />
