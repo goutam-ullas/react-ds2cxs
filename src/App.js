@@ -485,7 +485,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div class = "legendItem"> &#11044; </div>
+          <div className = "legendItem"> &#11044; </div>
         </div>
       </div>
     );
