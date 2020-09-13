@@ -334,7 +334,7 @@ smoothscroll.polyfill();
             style={{ position: "absolute", left: 190, top: 0, width:120, stroke:5 }}
             onChange={value => this.sliderChange(value)}
           >
-            <SliderTrack style={{height:2}}>
+            <SliderTrack style={{height:1}}>
               <SliderTrackHighlight />
               <SliderHandle />
             </SliderTrack>
