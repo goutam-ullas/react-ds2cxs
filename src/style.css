@@ -12,12 +12,9 @@
 [data-reach-slider-input] {
   outline:none;
 }
+
 [data-reach-slider-track] {
   background: #2f1dfc;
-  margin:0px;
-  padding:0px;
-  height:50px;
-  border: 0px;
 }
 
 [data-reach-slider-track-highlight] {
