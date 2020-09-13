@@ -373,7 +373,7 @@ class Application extends React.Component {
           </SliderInput>
           <span
             role="button"
-            aria-label="Circle Button"
+            aria-label="Next Scene"
             data-balloon-pos="down-right"
             onClick={this.circleFunction}
             style={{
@@ -386,7 +386,7 @@ class Application extends React.Component {
               color: "#2f1dfc"
             }}
           >
-            &#9677;
+            &#11027;
           </span>
           <span
             role="button"
@@ -404,6 +404,23 @@ class Application extends React.Component {
             }}
           >
             &#9653;
+          </span>
+                    <span
+            role="button"
+            aria-label="Circle Button"
+            data-balloon-pos="down-right"
+            onClick={this.triangleFunction}
+            style={{
+              fontSize: 32,
+              position: "relative",
+              display: "inline",
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
+            }}
+          >
+            &#9677;
           </span>
         </div>
         <div
