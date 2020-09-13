@@ -45,7 +45,8 @@ class Application extends React.Component {
       videoZindex3: 1,
       videoHeight: 180,
       videoWidth: 320,
-      imageDimX1: 0
+      imageDimX1: 0,
+      imageZindex1:1
     };
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
@@ -211,6 +212,9 @@ class Application extends React.Component {
     this.setState(prevState => ({
       imageDimX1: 1 - prevState.imageDimX1
     }));
+    this.setState(prevState => ({
+      imageZindex1: prevState.imageZindex1 == 1 ? 10 : 1
+    }));
   }
 
   render() {
@@ -295,12 +299,8 @@ class Application extends React.Component {
             height: this.state.themeGap
           }}
         >
-          <p className="theme">
-            {this.theme2Title}{" "}
-          </p>
-          <p className="theme">
-            {this.theme2Desc}{" "}
-          </p>
+          <p className="theme">{this.theme2Title} </p>
+          <p className="theme">{this.theme2Desc} </p>
           <ReactPlayer
             className="video"
             style={{
@@ -336,11 +336,14 @@ class Application extends React.Component {
               className="video"
               style={{
                 position: "absolute",
-                top: 90,
-                left: 850
+                top: 10,
+                left: 850,
+                zIndex: this.state.imageZindex1
               }}
               src="https://i.imgur.com/xRTW0OR.jpg"
               alt="Logo"
+              height={(this.state.imageDimX1 + 1) * this.state.videoHeight}
+              width="auto"
             />
           </span>
         </div>
