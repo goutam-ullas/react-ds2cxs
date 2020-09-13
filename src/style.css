@@ -293,11 +293,6 @@ button[aria-label][data-balloon-pos] {
   opacity: 0.5;
 }
 
-@font-face {
-  font-family: 'MyWebFont';
-  src: url('https://use.typekit.net/bor7jxc.css');
-}
-
 .titlebar{
   font-family: ballinger-mono, sans-serif;
   font-style: normal;
