@@ -11,6 +11,8 @@ import "@reach/slider/styles.css";
 import ReactPlayer from "react-player";
 import smoothscroll from "smoothscroll-polyfill";
 import Typekit from "react-typekit";
+//import { Document, Page } from "react-pdf";
+import { Document } from "react-pdf/dist/esm/entry.parcel";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 //import "mapbox-gl/dist/mapbox-gl.css";
@@ -502,42 +504,12 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div className="legendItem" style={{ color: "red", top: 50 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "yellow", top: 125 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "pink", top: 200 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "blue", top: 275 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "brown", top: 350 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "gray", top: 425 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "green", top: 500 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "purple", top: 575 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
-          <div className="legendItem" style={{ color: "orange", top: 650 }}>
-            {" "}
-            &#11044;{" "}
-          </div>
+          <img
+            style = {{position:"relative", marginTop:100, marginLeft:150}}
+            src="https://i.imgur.com/oEgq3R8.jpg"
+            height={3* window.innerHeight / 4}
+            width="auto"
+          />
         </div>
       </div>
     );

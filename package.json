@@ -11,8 +11,9 @@
     "mapbox-gl": "1.12.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-pdf": "^5.0.0",
     "react-player": "2.6.2",
-    "react-typekit": "^1.1.4",
+    "react-typekit": "1.1.4",
     "smoothscroll-polyfill": "0.4.4"
   },
   "scripts": {
