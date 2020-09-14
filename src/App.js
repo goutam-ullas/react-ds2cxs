@@ -510,6 +510,12 @@ class Application extends React.Component {
             height={3* window.innerHeight / 4}
             width="auto"
           />
+          <img
+            style = {{position:"relative", marginTop:100, marginLeft:150}}
+            src="https://i.imgur.com/Fn7Komh.jpg"
+            height={3* window.innerHeight / 4}
+            width="auto"
+          />
         </div>
       </div>
     );
