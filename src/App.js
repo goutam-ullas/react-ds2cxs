@@ -56,7 +56,7 @@ class Application extends React.Component {
     this.circleFunction = this.circleFunction.bind(this);
     this.squareFunction = this.squareFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
-    this.legendFunction = this.legendFunction.bind(this);
+    this.researchFunction = this.researchFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
     this.aboutText =
@@ -170,7 +170,7 @@ class Application extends React.Component {
     }
   }
 
-  legendFunction() {
+  researchFunction() {
     console.log("legend");
     this.setState(prevState => ({
       legendState: !prevState.legendState
@@ -442,7 +442,7 @@ class Application extends React.Component {
             role="button"
             aria-label="Legend"
             data-balloon-pos="down-right"
-            onClick={this.legendFunction}
+            onClick={this.triangleFunction}
             style={{
               fontSize: 32,
               position: "relative",
@@ -454,6 +454,23 @@ class Application extends React.Component {
             }}
           >
             &#9677;
+          </span>
+          <span
+            role="button"
+            aria-label=""
+            onClick={this.researchFunction}
+            style={{
+              fontSize: 28,
+              position: "relative",
+              display: "inline",
+              top: 0,
+              marginLeft: 10,
+              marginRight: 10,
+              textAlign: "center",
+              color: "#2f1dfc"
+            }}
+          >
+            Research
           </span>
         </div>
         <div
@@ -493,7 +510,7 @@ class Application extends React.Component {
           <span
             role="button"
             aria-label=""
-            onClick={this.legendFunction}
+            onClick={this.researchFunction}
             style={{
               fontSize: 28,
               position: "absolute",
@@ -505,15 +522,15 @@ class Application extends React.Component {
             &#10005;
           </span>
           <img
-            style = {{position:"relative", marginTop:100, marginLeft:150}}
+            style={{ position: "relative", marginTop: 100, marginLeft: 150 }}
             src="https://i.imgur.com/oEgq3R8.jpg"
-            height={3* window.innerHeight / 4}
+            height={(3 * window.innerHeight) / 4}
             width="auto"
           />
           <img
-            style = {{position:"relative", marginTop:100, marginLeft:150}}
+            style={{ position: "relative", marginTop: 100, marginLeft: 150 }}
             src="https://i.imgur.com/Fn7Komh.jpg"
-            height={3* window.innerHeight / 4}
+            height={(3 * window.innerHeight) / 4}
             width="auto"
           />
         </div>
