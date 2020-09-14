@@ -522,15 +522,15 @@ class Application extends React.Component {
             &#10005;
           </span>
           <img
-            style={{ position: "relative", marginTop: 100, marginLeft: 150 }}
+            style={{ position: "relative", marginTop: 100, marginLeft: 50 }}
             src="https://i.imgur.com/oEgq3R8.jpg"
-            height={(3 * window.innerHeight) / 4}
+            height={(4 * window.innerHeight) / 5}
             width="auto"
           />
           <img
-            style={{ position: "relative", marginTop: 100, marginLeft: 150 }}
+            style={{ position: "relative", marginTop: 100, marginLeft: 50 }}
             src="https://i.imgur.com/Fn7Komh.jpg"
-            height={(3 * window.innerHeight) / 4}
+            height={(4 * window.innerHeight) / 5}
             width="auto"
           />
         </div>
