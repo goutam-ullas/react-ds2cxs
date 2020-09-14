@@ -513,8 +513,8 @@ class Application extends React.Component {
             onClick={this.researchFunction}
             style={{
               fontSize: 28,
-              position: "absolute",
-              left: 10,
+              position: "fixed",
+              marginLeft: 10,
               color: "blue",
               zIndex: 300
             }}
